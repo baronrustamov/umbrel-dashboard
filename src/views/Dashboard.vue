@@ -42,7 +42,7 @@
             <!-- <p class="px-3 px-lg-4">Latest Blocks</p> -->
             <blockchain></blockchain>
             <div class="px-3 px-lg-4 py-3">
-              <router-link to="/bitcoin" class="card-link">Manage</router-link>
+              <router-link to="/bitcoin" class="card-link">Управлять</router-link>
             </div>
           </div>
         </card-widget>
@@ -78,7 +78,7 @@
                 ></span>
               </template>
               <div class="px-3 px-lg-4 pt-2 pb-3">
-                <router-link to="/bitcoin" class="card-link">Manage</router-link>
+                <router-link to="/bitcoin" class="card-link">Управление</router-link>
               </div>
             </card-widget>
           </b-col>
@@ -130,12 +130,12 @@ export default {
 
       const greetingMessage =
         currentHour >= 4 && currentHour < 12 // after 4:00AM and before 12:00PM
-          ? "Good morning"
+          ? "Доброе утро"
           : currentHour >= 12 && currentHour <= 16 // after 12:00PM and before 5:00PM
-          ? "Good afternoon"
+          ? "Добрый день"
           : currentHour > 16 || currentHour < 4 // after 5:00PM or before 4:00AM (to accommodate our fellow hackers)
-          ? "Good evening"
-          : "Welcome back"; // if for some reason the calculation didn't work
+          ? "Добрый вечер"
+          : "С возвращением!"; // if for some reason the calculation didn't work
 
       return greetingMessage;
     }

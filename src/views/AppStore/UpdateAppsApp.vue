@@ -14,7 +14,7 @@
               {{ app.name }}
             </h4>
             <span class="text-muted mb-0">
-              Version {{ app.version }}
+              Версия {{ app.version }}
             </span>
           </div>
         </div>
@@ -27,7 +27,7 @@
               class="px-2 btn-update"
               :class="{ 'fade-in-out': isUpdating }"
               :disabled="isUpdating"
-            >{{ isUpdating ? "Updating..." : "Update" }}</b-button>
+            >{{ isUpdating ? "Обновление..." : "Update" }}</b-button>
           </div>
           <span class="text-updated w-100 d-flex align-items-center justify-content-end">
             <b-icon icon="check-circle-fill" variant="success"></b-icon>

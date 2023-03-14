@@ -19,7 +19,7 @@
             fill="#C3C6D1"
           />
         </svg>
-        <small class="text-uppercase">Back to Umbrel App Store</small></b-link>
+        <small class="text-uppercase">Назад в Репозиторий Портала</small></b-link>
 
         <!-- Community app store header -->
         <div class="d-flex justify-content-between align-items-center">
@@ -31,15 +31,15 @@
               {{ communityAppStore.name }} App Store
             </h1>
             <p class="text-muted mb-0">
-              Discover and install apps from the {{ communityAppStore.name }} App Store
+              Устанвливайте приложения {{ communityAppStore.name }} из репозиториев
             </p>
             <div class="block w-100 py-3"></div>
           </div>
 
           <!-- Official app store header -->
           <div v-else>
-            <h1 class="text-lowercase">App Store</h1>
-            <p class="text-muted mb-0">Add super powers to your Umbrel with amazing self-hosted applications</p>
+            <h1 class="text-lowercase">Магазин приложений</h1>
+            <p class="text-muted mb-0">Выбирайте из бесконечного количества открытых приложений</p>
             <!-- Search  -->
             <div
               class="search-input-container mt-3 mb-2 d-flex align-items-center"
@@ -133,7 +133,7 @@
                     </a>
                   </div>
                   <div class="d-flex align-items-center justify-content-between w-100 px-2 px-lg-3">
-                    <h2 class="text-lowercase">Community App Stores</h2>
+                    <h2 class="text-lowercase">Иные репозитории</h2>
                   </div>
                 </div>
               </template>
@@ -191,7 +191,7 @@
 
     <!-- No results found -->
     <div v-else-if="!communityAppStoreId && appStoreSearchQuery && !appStoreSearchResults.length && !isTypingAppStoreSearchQuery" class="w-100">
-      <p class="text-muted">No results found</p>
+      <p class="text-muted">Нет результатов</p>
       <transition name="no-search-results-transition" appear>
         <img class="no-search-results-image d-block mt-5 mx-auto" src="@/assets/no-search-results.gif" />
       </transition>
@@ -249,11 +249,11 @@
       >
       <div class="px-3 px-lg-4 py-3">
         <span class="rocket ml-3 ml-lg-4">🚀</span>
-        <h4 class="font-weight-normal mt-4">Get your app on the Umbrel App Store</h4>
+        <h4 class="font-weight-normal mt-4">Получите Ваше приложение в репозитории</h4>
         <p class="text-muted mb-3">
-          Use any programming language, database or framework to build your app for Umbrel.
+          Используйте любой язык программирования для разработки приложений Портала.
         </p>
-        <b-link class="primary-link" href="https://github.com/getumbrel/umbrel-apps/blob/master/README.md" target="_blank">Learn more</b-link>
+        <b-link class="primary-link" href="https://github.com/getumbrel/umbrel-apps/blob/master/README.md" target="_blank">Узнать больше</b-link>
       </div>
       </card-widget>
     </div>
@@ -284,8 +284,8 @@
             </a>
           </div>
           <div class="d-flex align-items-center justify-content-between w-100 px-2 px-lg-3">
-            <h2 class="mr-auto text-lowercase">Updates</h2>
-            <b-button variant="outline-primary" class="px-2" size="sm" @click="updateAll" v-show="canUpdateAll && !isUpdatingAll">Update all</b-button>
+            <h2 class="mr-auto text-lowercase">Обновления</h2>
+            <b-button variant="outline-primary" class="px-2" size="sm" @click="updateAll" v-show="canUpdateAll && !isUpdatingAll">Обновить все</b-button>
           </div>
         </div>
       </template>

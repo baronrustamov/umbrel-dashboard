@@ -113,7 +113,7 @@
               </template>
               <div class="px-1 px-sm-4 pb-3">
                 <label> 
-                  Enter the code displayed in your authenticator app to disable 2FA
+                  Введите код аутентификации
                 </label>
                 <input-otp-token
                   autofocus
@@ -130,8 +130,8 @@
         <div class="pt-0">
           <div class="d-flex w-100 justify-content-between px-3 px-xl-4 mb-4">
             <div>
-              <span class="d-block">Password</span>
-              <small class="d-block" style="opacity: 0.4">Change your Umbrel's password</small>
+              <span class="d-block">Пароль</span>
+              <small class="d-block" style="opacity: 0.4">Изменение пароля для входа в Портал</small>
             </div>
 
             <b-button
@@ -144,7 +144,7 @@
             <b-modal id="change-password-modal" ref="change-password-modal" centered hide-footer>
               <template v-slot:modal-header="{ close }">
                 <div class="px-2 px-sm-3 pt-2 d-flex justify-content-between w-100">
-                  <h3>change password</h3>
+                  <h3>изменить пароль</h3>
                   <!-- Emulate built in modal header close button action -->
                   <a href="#" class="align-self-center" v-on:click.stop.prevent="close">
                     <svg
@@ -165,7 +165,7 @@
                 </div>
               </template>
               <div class="px-4 pb-2">
-                <label class="sr-onlsy" for="input-withdrawal-amount">Current password</label>
+                <label class="sr-onlsy" for="input-withdrawal-amount">Текущий пароль</label>
                 <input-password
                   v-model="currentPassword"
                   ref="password"
@@ -174,7 +174,7 @@
                   :disabled="isChangingPassword"
                 />
                 <div class="py-2"></div>
-                <label class="sr-onlsy" for="input-withdrawal-amount">New password</label>
+                <label class="sr-onlsy" for="input-withdrawal-amount">Новый пароль</label>
                 <input-password
                   v-model="newPassword"
                   ref="password"
@@ -183,7 +183,7 @@
                   :disabled="isChangingPassword"
                 />
                 <div class="py-2"></div>
-                <label class="sr-onlsy" for="input-withdrawal-amount">Confirm new password</label>
+                <label class="sr-onlsy" for="input-withdrawal-amount">Подтвердить новый пароль</label>
                 <input-password
                   v-model="confirmNewPassword"
                   ref="password"
@@ -355,20 +355,20 @@
         </div>
         <div class="px-3 px-xl-4 pb-4">
           <div class="w-100 d-flex justify-content-between mb-1">
-            <span class="align-self-end">Umbrel Version</span>
+            <span class="align-self-end">Версия Портал</span>
             <span class="font-weight-normal mb-0">{{ version }}</span>
           </div>
           <div v-show="!isCheckingForUpdate">
             <span v-show="!availableUpdate.version">
               <b-icon icon="check-circle-fill" variant="success"></b-icon>
-              <small class="ml-1" style="opacity: 0.4">Your Umbrel is on the latest version</small>
+              <small class="ml-1" style="opacity: 0.4">Ваш Портал обновлен</small>
             </span>
             <div v-show="availableUpdate.version">
               <span class="d-block">
                 <b-icon icon="bell-fill" variant="success"></b-icon>
                 <small
                   class="text-muted ml-1"
-                >Umbrel {{availableUpdate.version}} is now available to install</small>
+                >Новая версия Портала {{availableUpdate.version}} доступна для установки</small>
               </span>
               <b-button
                 class="mt-2"

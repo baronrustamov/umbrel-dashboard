@@ -3,8 +3,8 @@
     <div class="p-sm-2">
       <div class="my-3">
         <div>
-          <h1>connect wallet</h1>
-          <p>Connect your Bitcoin or Lightning wallet to your Umbrel</p>
+          <h1>подключить криптокошелек</h1>
+          <p>Поключите криптокошелек к Вашему Порталу</p>
         </div>
       </div>
 
