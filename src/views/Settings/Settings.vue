@@ -206,7 +206,7 @@
                 <b-alert variant="warning" show>
                   <small>
                     ⚠ Remember, there is no "Forgot Password" button. If you lose
-                    your password, you will not be able to login to your Umbrel.
+                    your password, you will not be able to login to your Портал.
                   </small>
                 </b-alert>
                 <b-button
@@ -227,7 +227,7 @@
               <small
                 class="d-block"
                 style="opacity: 0.4"
-              >Remotely access your Umbrel from anywhere using a Tor browser {{remoteTorAccess && onionAddress ? 'on this URL' : ''}}</small>
+              >Remotely access your Портал from anywhere using a Tor browser {{remoteTorAccess && onionAddress ? 'on this URL' : ''}}</small>
             </div>
             <toggle-switch
               class="align-self-center"
@@ -268,7 +268,7 @@
           <div class="d-flex w-100 justify-content-between px-3 px-xl-4 mb-4">
             <div>
               <span class="d-block">Shutdown</span>
-              <small class="d-block" style="opacity: 0.4">Power off your Umbrel</small>
+              <small class="d-block" style="opacity: 0.4">Power off your Портал</small>
             </div>
             <b-button variant="outline-primary" size="sm" @click="shutdownPrompt">Shutdown</b-button>
           </div>
@@ -277,7 +277,7 @@
           <div class="d-flex w-100 justify-content-between px-3 px-xl-4 mb-4">
             <div>
               <span class="d-block">Restart</span>
-              <small class="d-block" style="opacity: 0.4">Restart your Umbrel</small>
+              <small class="d-block" style="opacity: 0.4">Restart your Портал</small>
             </div>
 
             <b-button variant="outline-primary" size="sm" @click="rebootPrompt">Restart</b-button>
@@ -307,7 +307,7 @@
                 class="px-2 pt-2 d-flex justify-content-between w-100"
               >
                 <h4 v-if="loadingDebug">Generating logs...</h4> 
-                <h4 v-else>{{ showDmesg ? 'DMESG logs' : 'Umbrel logs' }}</h4>
+                <h4 v-else>{{ showDmesg ? 'DMESG logs' : 'Портал logs' }}</h4>
                 <!-- Emulate built in modal header close button action -->
                 <a
                   href="#"
@@ -343,10 +343,10 @@
                 <div v-if="loadingDebug"></div>
                 <div class="d-flex w-100 justify-content-between px-2" v-else>
                   <b-button size="sm" variant="outline-success" @click="showDmesg=!showDmesg">
-                    <b-icon icon="arrow-left-right" class="mr-1"></b-icon> View {{ (!showDmesg) ? "DMESG logs" : "Umbrel logs" }}
+                    <b-icon icon="arrow-left-right" class="mr-1"></b-icon> View {{ (!showDmesg) ? "DMESG logs" : "Портал logs" }}
                   </b-button>
                   <b-button size="sm" variant="outline-success" @click="downloadTextFile(debugContents, debugFilename)">
-                    <b-icon icon="download" class="mr-2"></b-icon>Download {{ showDmesg ? "DMESG logs" : "Umbrel logs" }}
+                    <b-icon icon="download" class="mr-2"></b-icon>Download {{ showDmesg ? "DMESG logs" : "Портал logs" }}
                   </b-button>
                 </div>
               </template>
@@ -678,7 +678,7 @@ export default {
       }
 
       this.$bvToast.toast(
-        `You've successfully changed your Umbrel's password`,
+        `You've successfully changed your Портал's password`,
         {
           title: "Password Changed",
           autoHideDelay: 3000,
@@ -740,7 +740,7 @@ export default {
     },
     async shutdownPrompt() {
       // disable on testnet
-      if (window.location.hostname === "testnet.getumbrel.com") {
+      if (window.location.hostname === "testnet.getПортал.com") {
         return this.$bvToast.toast('y u try to do dis on testnet :"(', {
           title: "Error",
           autoHideDelay: 3000,
@@ -751,7 +751,7 @@ export default {
       }
 
       // Get user consent first
-      const approved = window.confirm("Are you sure you want to shutdown your Umbrel?");
+      const approved = window.confirm("Are you sure you want to shutdown your Портал?");
       if (!approved) {
         return;
       }
@@ -768,14 +768,14 @@ export default {
       } catch (e) {
         toastText = "Shutdown failed";
         toastOptions.title =
-          "Something went wrong and Umbrel was not able to shutdown";
+          "Something went wrong and Портал was not able to shutdown";
         toastOptions.variant = "danger";
       }
       this.$bvToast.toast(toastText, toastOptions);
     },
     async rebootPrompt() {
       // disable on testnet
-      if (window.location.hostname === "testnet.getumbrel.com") {
+      if (window.location.hostname === "testnet.getПортал.com") {
         return this.$bvToast.toast('y u try to do dis on testnet :"(', {
           title: "Error",
           autoHideDelay: 3000,
@@ -786,7 +786,7 @@ export default {
       }
       // Reset any cached hasRebooted value from previous reboot
       this.$store.commit("system/setHasRebooted", false);
-      const approved = window.confirm("Are you sure you want to restart your Umbrel?");
+      const approved = window.confirm("Are you sure you want to restart your Портал?");
       if (!approved) {
         return;
       }
@@ -795,7 +795,7 @@ export default {
         await this.$store.dispatch("system/reboot");
       } catch (e) {
         this.$bvToast.toast("Reboot failed", {
-          title: "Something went wrong and Umbrel was not able to reboot",
+          title: "Something went wrong and Портал was not able to reboot",
           autoHideDelay: 3000,
           variant: "danger",
           solid: true,
@@ -804,7 +804,7 @@ export default {
       }
     },
     async toggleRemoteTorAccessSwitch() {
-      if(!window.confirm("Are you sure?\n\nThis will restart your Umbrel and it may take a few minutes.")) {
+      if(!window.confirm("Are you sure?\n\nThis will restart your Портал and it may take a few minutes.")) {
         return;
       }
 
