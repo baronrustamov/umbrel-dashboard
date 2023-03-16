@@ -28,7 +28,7 @@
       >
         <template v-slot:modal-header>
           <div class="px-2 px-sm-3 pt-2 d-flex justify-content-between align-items-center w-100">
-            <h3 class="mb-0">Umbrel {{ availableUpdate.version }}</h3>
+            <h3 class="mb-0">Портал {{ availableUpdate.version }}</h3>
             <!-- Emulate built in modal header close button action -->
             <a
               href="#"
@@ -86,15 +86,15 @@
         <div class="px-2">
           <div class="d-flex">
             <img src="@/assets/icon-dead-sd-card.svg" alt="Failed microSD card" class="mr-3" height="100" />
-            <p class="text-muted">It looks like the microSD card in your Raspberry Pi could fail soon. microSD cards are prone to wear and tear over time. But don't worry, Umbrel stores all of your data on the external USB drive.</p>
+            <p class="text-muted">It looks like the microSD card in your Raspberry Pi could fail soon. microSD cards are prone to wear and tear over time. But don't worry, Портал stores all of your data on the external USB drive.</p>
           </div>
           <p class="my-3">Follow these steps to replace your microSD card:</p>
-          <p>1. Shutdown your Umbrel.</p>
+          <p>1. Shutdown your Портал.</p>
           <p>2. Disconnect the Rasbperry Pi from the power supply.</p>
-          <p>3. Flash <b-link :href="`https://github.com/getumbrel/umbrel-os/releases/download/v${version}/umbrel-os-v${version}.zip`" target="_blank" class="glass-link">Umbrel OS {{ version }}</b-link> onto a new microSD card (at least 16GB size).</p>
+          <p>3. Flash <b-link :href="`https://github.com/getumbrel/umbrel-os/releases/download/v${version}/umbrel-os-v${version}.zip`" target="_blank" class="glass-link">Портал OS {{ version }}</b-link> onto a new microSD card (at least 16GB size).</p>
           <p>4. Replace the existing microSD card in your Raspberry Pi with the new one.</p>
           <p>5. Turn on the Raspberry Pi.</p>
-          <p class="mt-3">That's it! Your Umbrel should continue to function normally after the replacement.</p>
+          <p class="mt-3">That's it! Your Портал should continue to function normally after the replacement.</p>
           <div class="mt-3 mb-2 d-flex flex-wra">
             <b-button
               variant="success"

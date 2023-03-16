@@ -10,7 +10,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center min-vh100 p-2">
           <logo class="mb-5 logo" />
           <span class="text-muted w-75 text-center">
-            <small>For security reasons Umbrel cannot be embedded in an iframe.</small>
+            <small>For security reasons Портал cannot be embedded in an iframe.</small>
           </span>
         </div>
       </div>
@@ -19,7 +19,7 @@
           <small class="text-white d-block">{{`${updateStatus.description}...`}}</small>
           <b-alert class="alert-system" variant="glass" show>
             <div class="d-flex align-items-center">
-              <small>Please do not refresh this page or turn off your Umbrel while the update is in progress</small>
+              <small>Please do not refresh this page or turn off your Портал while the update is in progress</small>
             </div>
           </b-alert>
         </div>
@@ -33,7 +33,7 @@
         <div class="text-center" v-if="shuttingDown || rebooting">
           <b-alert class="alert-system" variant="glass" show>
             <div class="d-flex align-items-center">
-              <small>Please do not refresh this page or turn off your Umbrel while it is {{ shuttingDown ? 'shutting down' : 'rebooting'}}</small>
+              <small>Please do not refresh this page or turn off your Портал while it is {{ shuttingDown ? 'shutting down' : 'rebooting'}}</small>
             </div>
           </b-alert>
         </div>
