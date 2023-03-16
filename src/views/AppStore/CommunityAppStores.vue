@@ -3,7 +3,7 @@
 
     <!-- Intro text -->
     <p class="text-muted">
-      Community App Stores allow you to install apps on your Umbrel that may not be available in the official Umbrel App Store. They also make it easy to test beta versions of Umbrel apps, then provide valuable feedback to developers before they release their apps on the official Umbrel App Store.
+      Community App Stores allow you to install apps on your Портал that may not be available in the official Портал App Store. They also make it easy to test beta versions of Портал apps, then provide valuable feedback to developers before they release their apps on the official Портал App Store.
     </p>
     <div class="mt-2 mb-3">
       <b-link class="primary-link" href="https://github.com/getumbrel/umbrel-community-app-store" target="_blank">Learn more</b-link>
@@ -11,7 +11,7 @@
 
     <!-- Warning  -->
     <b-alert variant="warning" show class="mb-4">
-      <small>Community App Stores can be created by anyone. The apps published in them are not verified or vetted by the official Umbrel App Store team, and can potentially be insecure or malicious. Use caution and only add app stores from developers you trust.</small>
+      <small>Community App Stores can be created by anyone. The apps published in them are not verified or vetted by the official Портал App Store team, and can potentially be insecure or malicious. Use caution and only add app stores from developers you trust.</small>
     </b-alert>
 
     <!-- Form to add a community app store  -->
@@ -108,7 +108,7 @@ export default {
             this.isAddingCommunityAppStore = false;
             // reset input URL field
             this.communityAppStoreUrl = '';
-            return this.$bvToast.toast(`Added "${communityAppStore.name}" Community App Store to your Umbrel.`, {
+            return this.$bvToast.toast(`Added "${communityAppStore.name}" Community App Store to your Портал.`, {
               title: "Community App Store Added",
               autoHideDelay: 3000,
               variant: "success",

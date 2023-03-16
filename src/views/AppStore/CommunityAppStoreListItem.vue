@@ -92,7 +92,7 @@ export default {
           // if no app store found = it's removed
           if (!communityAppStore) {
             this.isRemoving = false;
-            return this.$bvToast.toast(`Removed "${this.name}" Community App Store from your Umbrel.`, {
+            return this.$bvToast.toast(`Removed "${this.name}" Community App Store from your Портал.`, {
               title: "Community App Store Removed",
               autoHideDelay: 3000,
               variant: "success",

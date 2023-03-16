@@ -252,7 +252,7 @@
         :loading="isCheckingForUpdate || isUpdating"
       >
         <div class="d-block pt-2"></div>
-        <!-- Uptime monitoring is only available on Umbrel OS -->
+        <!-- Uptime monitoring is only available on Портал OS -->
         <div class="pt-0" v-if="isUmbrelOS">
           <div class="d-flex w-100 justify-content-between px-3 px-xl-4 mb-4">
             <div>

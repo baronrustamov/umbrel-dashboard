@@ -4,7 +4,7 @@
     <div v-if="step === 0" class="d-flex flex-column align-items-center justify-content-center p-2 min-vh100">
       <div class="w-75 d-flex flex-column align-items-center justify-content-center">
         <logo class="mb-3 logo" />
-        <h1 class="text-center text-white text-lowercase mb-2">Welcome to Umbrel</h1>
+        <h1 class="text-center text-white text-lowercase mb-2">Добро пожаловать в Портал</h1>
         <p class="text-center text-white">Your personal server is now ready to setup.</p>
         <transition name="slide-up" appear>
           <b-button
@@ -21,7 +21,7 @@
       <logo class="logo logo-xs d-sm-none" />
         <div v-if="step === 1" :key="1" class="card-glass px-3 px-sm-4 pt-5 pb-5 mt-5 mt-sm-0 mx-2">
           <h3 class="text-center text-white mb-2">Create your account</h3>
-          <p class="text-center text-white mb-2">Your account information is stored only on your Umbrel. Please make sure to backup your password safely as there is no way to reset it.</p>
+          <p class="text-center text-white mb-2">Your account information is stored only on your Портал. Please make sure to backup your password safely as there is no way to reset it.</p>
           <div class="form-container mt-4 d-flex flex-column form-container w-100 align-items-center">
             <div class="position-relative w-100">
               <b-form-input
@@ -73,7 +73,7 @@
           <h3 class="text-center text-white mb-2">Congratulations 🎉</h3>
           <p class="text-center text-white mb-2">That's it — you're all set.</p>
           <div class="form-container mt-4 d-flex flex-column form-container w-100 align-items-center">
-            <p class="opacity-80 text-center text-white">By clicking next, you agree that Umbrel is in beta and should not be considered secure.</p>
+            <p class="opacity-80 text-center text-white">By clicking next, you agree that Портал is in beta and should not be considered secure.</p>
           </div>
           <div class="d-flex flex-column align-items-center">
           <b-button

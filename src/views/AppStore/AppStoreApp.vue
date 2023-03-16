@@ -264,7 +264,7 @@
       <div class="px-2">
         <p>{{ app.name }} is an app published in a Community App Store called "{{ communityAppStore.name }}".
           <br/><br/>
-          <span class="font-weight-bold">Apps in Community App Stores are not verified or vetted by the official Umbrel App Store team, and can potentially be insecure or malicious.</span>
+          <span class="font-weight-bold">Apps in Community App Stores are not verified or vetted by the official Портал App Store team, and can potentially be insecure or malicious.</span>
           <br/><br/>
         </p>
       </div>
@@ -476,7 +476,7 @@ export default {
     openApp(event) {
       if (this.app.torOnly && window.location.origin.indexOf(".onion") < 0) {
         event.preventDefault();
-        alert(`${this.app.name} can only be used over Tor. Please access your Umbrel in a Tor browser on your remote access URL (Settings > Account > Remote access) to open this app.`);
+        alert(`${this.app.name} can only be used over Tor. Please access your Портал in a Tor browser on your remote access URL (Settings > Account > Remote access) to open this app.`);
       }
       return;
     },

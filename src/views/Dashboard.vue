@@ -2,7 +2,7 @@
   <div class="p-sm-2">
     <div class="my-3 pb-2">
       <h1 class="text-lowercase">{{ greeting }}{{ name ? `, ${name.split(" ")[0]}` : "" }}</h1>
-      <!-- <p class="text-muted">Here's an overview of your Umbrel</p> -->
+      <!-- <p class="text-muted">Here's an overview of your Портал</p> -->
     </div>
     <b-row>
       <b-col col cols="12" md="6" xl="4">

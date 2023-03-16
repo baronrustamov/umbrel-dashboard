@@ -23,7 +23,7 @@
           <logo class="umbrel-logo mb-2" compact />
           <span class="text-greeting text-white text-lowercase text-center d-block mb-4">{{ greeting }}, {{ name.split(" ")[0] }}</span>
           
-          <!-- Umbrel update notification -->
+          <!-- Портал update notification -->
           <transition name="notification-transition" appear>
             <notification v-if="availableUpdate.version" :text="`Портал ${availableUpdate.version} is now available`">
               <b-button @click.prevent="confirmUpdate" variant="alert-glass" size="sm" class="px-2 px-sm-3 mr-2 mr-sm-3" pill>Показать</b-button>
